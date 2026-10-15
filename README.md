@@ -1,4 +1,4 @@
-# RekberHub — Website Statis v1
+# RekberHub — Website Statis v2
 
 Website publik RekberHub (beranda, Toko Resmi, contoh tampilan transaksi).
 HTML + CSS + JavaScript biasa, tanpa build. Mendukung mode terang/gelap dan tampilan HP/desktop.
@@ -52,3 +52,4 @@ Setiap `git push` ke branch utama otomatis memperbarui website.
 - Kalkulator biaya memakai tabel tarif usulan di blueprint. Ubah fungsi `hitungFee` di `assets/app.js` jika tarif berubah.
 - Fitur lacak transaksi masih berupa pesan sementara sampai backend (Sprint 2) siap.
 - Jangan menampilkan klaim "100% aman" atau testimoni yang belum nyata.
+- v2: fokus MLBB & Honor of Kings. Teks risiko (larangan jual beli akun di ToS Moonton/Level Infinite) sengaja ditampilkan di beranda, FAQ, dan Toko — jangan dihapus, ini melindungi kamu dari tuduhan menyesatkan pembeli.

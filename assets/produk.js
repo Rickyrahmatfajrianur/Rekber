@@ -11,11 +11,11 @@
   - beli      : link tombol beli, contoh link WhatsApp resmi dengan pesan otomatis
   - terjual   : true jika sudah terjual (kartu tetap tampil dengan label TERJUAL)
 
-  Hanya tampilkan akun yang game-nya mengizinkan pengalihan akun dan sudah lolos karantina.
+  Hanya tampilkan akun yang sudah lolos karantina dan bisa dialihkan penuh (email + binding).
 */
 window.PRODUK_TOKO = [
   {
-    game: "[Game A]",
+    game: "Mobile Legends",
     judul: "Akun [rank] · [jumlah] hero/skin",
     tag: ["Server [ID]", "Binding dilepas", "Email bisa diganti"],
     harga: 0,
@@ -25,7 +25,7 @@ window.PRODUK_TOKO = [
     terjual: false
   },
   {
-    game: "[Game B]",
+    game: "Honor of Kings",
     judul: "Akun level [XX] · [item unggulan]",
     tag: ["Server [ID]", "Riwayat pemilik tercatat"],
     harga: 0,
@@ -35,7 +35,7 @@ window.PRODUK_TOKO = [
     terjual: false
   },
   {
-    game: "[Game A]",
+    game: "Mobile Legends",
     judul: "Akun starter · [rank] · [jumlah] skin",
     tag: ["Server [ID]", "Binding dilepas"],
     harga: 0,
