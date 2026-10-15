@@ -1,4 +1,4 @@
-# RekberHub — Website Statis v2
+# RekberHub — Website Statis v3
 
 Website publik RekberHub (beranda, Toko Resmi, contoh tampilan transaksi).
 HTML + CSS + JavaScript biasa, tanpa build. Mendukung mode terang/gelap dan tampilan HP/desktop.
@@ -9,6 +9,7 @@ HTML + CSS + JavaScript biasa, tanpa build. Mendukung mode terang/gelap dan tamp
 index.html              Beranda: hero, lacak, layanan, cara kerja, biaya + kalkulator, cek admin, FAQ
 toko.html               Katalog Toko Resmi (data dari assets/produk.js)
 contoh-transaksi.html   Contoh tampilan detail transaksi (tidak diindeks Google)
+peringatan.html         Peringatan & risiko: larangan ToS, yang dilindungi/tidak, anti-penipuan
 assets/style.css        Warna, font, layout
 assets/app.js           Mode gelap, kalkulator biaya, filter toko, dialog
 assets/produk.js        DATA PRODUK TOKO — edit di sini
@@ -28,6 +29,7 @@ Cari dan ganti teks berikut di semua file `.html` (Ctrl+Shift+H di VS Code):
 | `[JAM OPERASIONAL]` | mis. `08.00–22.00` |
 | `[LINK_LOGIN]` | Link login dashboard (sementara bisa `#`) |
 | `[LINK_SYARAT_LAYANAN]`, `[LINK_KEBIJAKAN_PRIVASI]` | Link halaman legal (sementara bisa `#`) |
+| `[TANGGAL PEMBARUAN]` | Tanggal terakhir halaman peringatan ditinjau |
 | `[7]`, `[3×24 jam]` | Masa garansi dan karantina yang kamu tetapkan |
 
 Produk Toko diatur di `assets/produk.js`. Harga `0` tampil sebagai `Rp[HARGA]`. Foto taruh di folder `img/` lalu isi `foto: "/img/nama-file.jpg"`.
