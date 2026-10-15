@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketplace Akun Game – [Nama Rekber]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      [Nama Rekber]
+    </a>
+    <nav class="nav" aria-label="Menu utama">
+      <a class="active" href="marketplace.html">Beli Akun Game</a>
+      <a href="cek-status.html">Cek Status</a>
+      <a class="pill" href="#jual">Jual Akun</a>
+    </nav>
+  </div>
+  <div class="wrap" style="padding-top:24px;padding-bottom:48px">
+    <h1 style="font-size:40px;font-weight:800">Marketplace akun game</h1>
+    <p class="on-primary-muted" style="margin:10px 0 24px;font-size:17px">Setiap pembelian otomatis dilindungi rekber. Dana ke penjual baru cair setelah akun kamu terima dan amankan.</p>
+    <form id="formCari" style="display:flex;flex-wrap:wrap;gap:8px;max-width:760px" role="search">
+      <label for="cari" class="sr-only">Cari akun</label>
+      <input id="cari" class="input input-lg" style="flex:1 1 280px;width:auto" type="search" placeholder="Cari rank, hero, skin, server...">
+      <button class="btn btn-accent" type="submit">Cari</button>
+    </form>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:32px;padding-bottom:96px">
+  <div id="chips" class="chips" role="group" aria-label="Filter game"></div>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px">
+    <p class="muted" style="margin:0;font-size:15px" aria-live="polite">Menampilkan <strong id="jumlah" style="color:#0F1A2E">0</strong> akun · <span id="labelAktif">semua game</span></p>
+    <div style="display:flex;align-items:center;gap:8px">
+      <label for="urut" style="font-size:14px;font-weight:600">Urutkan</label>
+      <select id="urut" class="input" style="height:44px;width:auto">
+        <option value="baru">Terbaru</option>
+        <option value="murah">Harga termurah</option>
+        <option value="mahal">Harga termahal</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="grid" class="grid"></div>
+  <p id="kosong" class="muted" style="display:none;font-size:16px;padding:40px 0;text-align:center">Belum ada akun yang cocok dengan pencarianmu.</p>
+
+  <section id="jual" class="band" style="margin-top:56px;justify-content:space-between">
+    <div style="flex:1 1 420px;min-width:0">
+      <h2 style="font-size:28px;font-weight:800">Punya akun yang mau dijual?</h2>
+      <p class="on-primary-muted" style="margin:10px 0 0;font-size:16px;line-height:1.6">Pasang iklan, admin cek kelengkapan akun, lalu dana kamu terima setelah pembeli konfirmasi. Biaya jasa [FEE %] dari harga jual.</p>
+    </div>
+    <a class="btn btn-accent" href="#jual">Pasang Iklan Akun</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>[Nama Rekber] · Kontak resmi: WA [NOMOR RESMI]</span>
+    <span>Syarat &amp; Ketentuan · Kebijakan Refund</span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+  var akun = DATA_AKUN;
+  var games = ['Semua', 'Mobile Legends', 'Honor of Kings', 'Free Fire', 'Genshin Impact'];
+  var aktif = 'Semua';
+  var kata = '';
+
+  var ikon = '<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="0.8"/><circle cx="18" cy="13.5" r="0.8"/></svg>';
+
+  function renderChips() {
+    document.getElementById('chips').innerHTML = games.map(function (g) {
+      return '<button type="button" class="chip" aria-pressed="' + (g === aktif) + '" data-game="' + esc(g) + '">' + esc(g) + '</button>';
+    }).join('');
+  }
+
+  function renderGrid() {
+    var list = akun.filter(function (a) {
+      var cocokGame = aktif === 'Semua' || a.game === aktif;
+      var teks = (a.title + ' ' + a.spec + ' ' + a.game).toLowerCase();
+      return cocokGame && (!kata || teks.indexOf(kata) !== -1);
+    });
+    var urut = document.getElementById('urut').value;
+    if (urut === 'murah') list.sort(function (a, b) { return a.harga - b.harga; });
+    if (urut === 'mahal') list.sort(function (a, b) { return b.harga - a.harga; });
+
+    document.getElementById('grid').innerHTML = list.map(function (a) {
+      return '<a class="item" href="detail-akun.html?id=' + a.id + '">' +
+        '<div class="item-img">' + ikon + '<span>Screenshot akun</span>' +
+          '<span class="tag">' + esc(a.game) + '</span>' +
+          (a.verified ? '<span class="tag tag-ok">Terverifikasi</span>' : '') +
+        '</div>' +
+        '<div class="item-body"><h2>' + esc(a.title) + '</h2><p>' + esc(a.spec) + '</p>' +
+          '<div class="item-foot"><span class="price">' + rupiah(a.harga) + '</span><span class="muted" style="font-size:13px">' + esc(a.seller) + '</span></div>' +
+        '</div></a>';
+    }).join('');
+    document.getElementById('jumlah').textContent = list.length;
+    document.getElementById('labelAktif').textContent = aktif === 'Semua' ? 'semua game' : aktif;
+    document.getElementById('kosong').style.display = list.length ? 'none' : 'block';
+  }
+
+  document.getElementById('chips').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-game]');
+    if (!b) return;
+    aktif = b.getAttribute('data-game');
+    renderChips(); renderGrid();
+  });
+  document.getElementById('urut').addEventListener('change', renderGrid);
+  document.getElementById('formCari').addEventListener('submit', function (e) {
+    e.preventDefault();
+    kata = document.getElementById('cari').value.trim().toLowerCase();
+    renderGrid();
+  });
+  document.getElementById('cari').addEventListener('input', function () {
+    kata = this.value.trim().toLowerCase();
+    renderGrid();
+  });
+
+  renderChips(); renderGrid();
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Nama Rekber] – Rekening Bersama &amp; Marketplace Akun Game</title>
+<meta name="description" content="Jasa rekening bersama (rekber) untuk transaksi online yang aman, plus marketplace akun game yang dilindungi rekber.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      [Nama Rekber]
+    </a>
+    <nav class="nav" aria-label="Menu utama">
+      <a href="marketplace.html" style="font-weight:700">Beli Akun Game</a>
+      <a href="#alur">Cara Kerja</a>
+      <a href="#biaya">Biaya</a>
+      <a href="#verifikasi">Cek Admin Resmi</a>
+      <a class="pill" href="cek-status.html">Cek Status</a>
+    </nav>
+  </div>
+
+  <div class="wrap hero">
+    <div class="hero-text">
+      <p class="eyebrow">Rekening Bersama</p>
+      <h1>Transaksi online aman, uang ditahan sampai barang diterima.</h1>
+      <p class="on-primary-muted" style="margin:24px 0 0;font-size:18px;line-height:1.6;max-width:520px">Kami jadi pihak penengah antara pembeli dan penjual. Dana baru diteruskan ke penjual setelah pembeli konfirmasi barang atau akun sesuai.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
+        <a class="btn btn-accent" href="#mulai">Mulai Transaksi</a>
+        <a class="btn btn-ghost" href="marketplace.html">Jelajahi Akun Game</a>
+      </div>
+    </div>
+
+    <form id="mulai" class="hero-form" onsubmit="event.preventDefault();alert('Mockup: di versi asli, kode transaksi dikirim ke kedua pihak.');">
+      <h2 style="font-size:22px;font-weight:800;margin-bottom:4px">Buat Transaksi Baru</h2>
+      <p class="muted" style="margin:0 0 24px;font-size:14px">Isi detail, kami kirim kode transaksi ke kedua pihak.</p>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="field">
+          <label for="peran">Saya sebagai</label>
+          <select id="peran" class="input"><option>Pembeli</option><option>Penjual</option></select>
+        </div>
+        <div class="field">
+          <label for="barang">Barang / akun yang ditransaksikan</label>
+          <input id="barang" class="input" type="text" placeholder="Contoh: Akun game level 80">
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <div class="field" style="flex:1 1 140px">
+            <label for="harga">Harga (Rp)</label>
+            <input id="harga" class="input" type="text" inputmode="numeric" placeholder="0">
+          </div>
+          <div class="field" style="flex:1 1 140px">
+            <label for="wa">WA pihak lawan</label>
+            <input id="wa" class="input" type="tel" placeholder="08xx">
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Buat Kode Transaksi</button>
+      </div>
+    </form>
+  </div>
+</header>
+
+<main>
+  <section id="alur" class="wrap section">
+    <h2 class="title">Cara kerjanya</h2>
+    <p class="muted" style="margin:12px 0 0;font-size:17px">Lima langkah, setiap status bisa dipantau dengan kode transaksi.</p>
+    <div class="steps">
+      <div class="step"><span class="step-num">1</span><h3 style="font-size:18px">Buat transaksi</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Salah satu pihak mengisi detail barang dan harga, lalu mendapat kode transaksi.</p></div>
+      <div class="step"><span class="step-num">2</span><h3 style="font-size:18px">Pembeli transfer</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Pembeli mentransfer dana ke rekening resmi rekber dan mengunggah bukti.</p></div>
+      <div class="step"><span class="step-num">3</span><h3 style="font-size:18px">Dana diverifikasi</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Admin memastikan dana masuk dan memberi tahu penjual untuk mengirim.</p></div>
+      <div class="step"><span class="step-num">4</span><h3 style="font-size:18px">Barang dikirim</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Penjual mengirim barang atau menyerahkan akun beserta buktinya.</p></div>
+      <div class="step"><span class="step-num">5</span><h3 style="font-size:18px">Dana dicairkan</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Setelah pembeli konfirmasi, dana diteruskan ke penjual dikurangi biaya.</p></div>
+    </div>
+  </section>
+
+  <section id="biaya" class="wrap section">
+    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start">
+      <div style="flex:1 1 320px;min-width:0">
+        <h2 class="title">Biaya jasa</h2>
+        <p class="muted" style="margin:12px 0 0;font-size:17px;line-height:1.6">Biaya dipotong saat dana dicairkan. Pihak yang menanggung biaya disepakati di awal transaksi.</p>
+      </div>
+      <div class="table-box" style="flex:2 1 520px;min-width:0">
+        <table>
+          <thead><tr><th>Nominal transaksi</th><th>Biaya</th></tr></thead>
+          <tbody>
+            <tr><td>Sampai Rp [BATAS 1]</td><td><strong>Rp [FEE TETAP]</strong></td></tr>
+            <tr><td>Rp [BATAS 1] – Rp [BATAS 2]</td><td><strong>[FEE %]</strong></td></tr>
+            <tr><td>Di atas Rp [BATAS 2]</td><td><strong>[FEE %], verifikasi KTP wajib</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="verifikasi" class="wrap section">
+    <div class="band">
+      <div style="flex:1 1 360px;min-width:0">
+        <h2 style="font-size:30px;font-weight:800">Waspada admin palsu</h2>
+        <p class="on-primary-muted" style="margin:12px 0 0;font-size:16px;line-height:1.6">Sebelum transfer, cek apakah nomor WA atau rekening yang menghubungi kamu benar milik kami. Kami tidak pernah meminta transfer ke rekening selain yang terdaftar di sini.</p>
+      </div>
+      <form style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:8px" onsubmit="event.preventDefault();alert('Mockup: di versi asli, nomor dicocokkan dengan daftar admin resmi.');">
+        <label for="cekadmin" style="font-size:14px;font-weight:600">Nomor WA atau rekening</label>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <input id="cekadmin" class="input input-lg" style="flex:1 1 200px;width:auto" type="text" placeholder="Masukkan nomor">
+          <button class="btn btn-accent" type="submit">Cek</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <h2 class="title" style="margin-bottom:24px">Pertanyaan umum</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="faq"><h3 style="font-size:17px;margin-bottom:6px">Bagaimana kalau barang tidak sesuai?</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Ajukan sengketa sebelum konfirmasi. Dana tetap ditahan sampai ada keputusan sesuai aturan refund.</p></div>
+      <div class="faq"><h3 style="font-size:17px;margin-bottom:6px">Berapa lama batas konfirmasi pembeli?</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">[BATAS WAKTU]. Jika lewat tanpa sengketa, dana dicairkan otomatis ke penjual.</p></div>
+      <div class="faq"><h3 style="font-size:17px;margin-bottom:6px">Apakah transaksi akun game bisa?</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Bisa. Pastikan email dan nomor HP akun sudah dipindahkan sebelum konfirmasi.</p></div>
+      <div class="faq"><h3 style="font-size:17px;margin-bottom:6px">Kenapa harus verifikasi identitas?</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Untuk nominal besar, verifikasi melindungi kedua pihak dan mencegah rekber dipakai untuk penipuan.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>[Nama Rekber] · Kontak resmi: WA [NOMOR RESMI]</span>
+    <span>Syarat &amp; Ketentuan · Kebijakan Refund</span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detail Akun – [Nama Rekber]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      [Nama Rekber]
+    </a>
+    <nav class="nav" aria-label="Menu utama">
+      <a href="marketplace.html">Kembali ke marketplace</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap cols" style="padding-top:32px">
+  <div class="col-main">
+    <div class="card" style="padding:20px">
+      <div class="gallery-main">
+        <svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>
+        <span>Screenshot profil akun</span>
+      </div>
+      <div class="thumbs" aria-hidden="true"><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:20px;font-weight:800;margin-bottom:16px">Spesifikasi akun</h2>
+      <div id="specs" class="specs"></div>
+      <h3 style="font-size:17px;margin:24px 0 8px">Deskripsi penjual</h3>
+      <p class="muted" style="margin:0;font-size:15px;line-height:1.65">[Deskripsi dari penjual: hero favorit, skin langka, riwayat akun, alasan dijual.]</p>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:20px;font-weight:800;margin-bottom:16px">Yang kamu terima setelah bayar</h2>
+      <ul class="checks">
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M5 12l5 5 9-10"/></svg>Email dan password akun, dikirim lewat halaman transaksi (bukan chat pribadi)</li>
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M5 12l5 5 9-10"/></svg>Pendampingan admin saat mengganti email, nomor HP, dan keamanan akun</li>
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M5 12l5 5 9-10"/></svg>Waktu [BATAS WAKTU] untuk mengecek akun sebelum dana diteruskan</li>
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M5 12l5 5 9-10"/></svg>Refund penuh bila akun tidak sesuai deskripsi</li>
+      </ul>
+    </div>
+  </div>
+
+  <aside class="col-side">
+    <div class="card">
+      <span id="tagGame" class="badge" style="background:#123E7C;color:#fff;font-size:12px;padding:5px 10px"></span>
+      <h1 id="judul" style="margin-top:12px;font-size:26px;line-height:1.3;font-weight:800"></h1>
+      <p id="harga" style="margin:16px 0 0;font-size:32px;font-weight:800;color:#123E7C"></p>
+      <p class="muted" style="margin:4px 0 0;font-size:14px">Sudah termasuk perlindungan rekber</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
+        <a class="btn btn-accent" href="cek-status.html" style="font-weight:800">Beli Sekarang</a>
+        <button class="btn btn-outline" type="button" onclick="alert('Mockup: chat dengan penjual lewat platform akan terbuka di sini.')">Tanya Penjual</button>
+      </div>
+    </div>
+
+    <div class="card" style="padding:24px;display:flex;gap:14px;align-items:center">
+      <div id="avatar" style="width:52px;height:52px;flex-shrink:0;border-radius:50%;background:#DCE4F2;color:#123E7C;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px">P</div>
+      <div>
+        <p id="seller" style="margin:0;font-size:16px;font-weight:700"></p>
+        <p id="sellerInfo" class="muted" style="margin:2px 0 0;font-size:14px"></p>
+      </div>
+    </div>
+
+    <div class="band" style="padding:24px;border-radius:20px;display:block">
+      <h2 style="font-size:17px;font-weight:800;margin-bottom:8px">Dilindungi rekber</h2>
+      <p class="on-primary-muted" style="margin:0;font-size:14px;line-height:1.6">Uang kamu ditahan admin. Penjual baru dibayar setelah kamu login, ganti email dan nomor HP, lalu menekan konfirmasi. Ada masalah? Ajukan sengketa sebelum [BATAS WAKTU].</p>
+    </div>
+  </aside>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>[Nama Rekber] · Kontak resmi: WA [NOMOR RESMI]</span>
+    <span>Syarat &amp; Ketentuan · Kebijakan Refund</span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+  var id = Number(new URLSearchParams(location.search).get('id')) || 1;
+  var a = DATA_AKUN.filter(function (x) { return x.id === id; })[0] || DATA_AKUN[0];
+
+  document.title = a.title + ' – [Nama Rekber]';
+  document.getElementById('tagGame').textContent = a.game;
+  document.getElementById('judul').textContent = a.title;
+  document.getElementById('harga').textContent = rupiah(a.harga);
+  document.getElementById('seller').textContent = a.seller;
+  document.getElementById('avatar').textContent = a.seller.charAt(0).toUpperCase();
+  document.getElementById('sellerInfo').textContent = '[JUMLAH] akun terjual · ' + (a.verified ? 'identitas terverifikasi' : 'belum terverifikasi');
+  document.getElementById('specs').innerHTML = Object.keys(a.detail).map(function (k) {
+    return '<div class="spec"><p class="muted" style="font-size:13px">' + esc(k) + '</p><p style="margin-top:4px;font-size:16px;font-weight:700">' + esc(a.detail[k]) + '</p></div>';
+  }).join('');
+</script>
+</body>
+</html>

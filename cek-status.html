@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cek Status Transaksi – [Nama Rekber]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      [Nama Rekber]
+    </a>
+    <nav class="nav" aria-label="Menu utama">
+      <a href="marketplace.html">Beli Akun Game</a>
+      <a class="active" href="cek-status.html">Cek Status</a>
+      <a href="index.html">Beranda</a>
+    </nav>
+  </div>
+  <div class="wrap" style="padding-top:32px;padding-bottom:56px">
+    <h1 style="font-size:40px;font-weight:800;margin-bottom:20px">Cek status transaksi</h1>
+    <form id="formKode" style="max-width:640px">
+      <label for="kode" class="on-primary-muted" style="display:block;font-size:14px;font-weight:600;margin-bottom:8px">Kode transaksi</label>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <input id="kode" class="input input-lg" style="flex:1 1 260px;width:auto;font-weight:600;letter-spacing:.04em" type="text" value="RB-CONTOH01">
+        <button class="btn btn-accent" type="submit">Cek Status</button>
+      </div>
+    </form>
+  </div>
+</header>
+
+<main class="wrap cols">
+  <div class="col-main card">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-start">
+      <div>
+        <p class="muted" style="margin:0;font-size:14px">Kode transaksi</p>
+        <p id="kodeTampil" style="margin:4px 0 0;font-size:24px;font-weight:800;letter-spacing:.04em">RB-CONTOH01</p>
+      </div>
+      <span id="badge" class="badge badge-wait">Menunggu konfirmasi pembeli</span>
+    </div>
+
+    <div class="summary">
+      <div><p class="k">Barang</p><p class="v">[Nama barang/akun]</p></div>
+      <div><p class="k">Nominal</p><p class="v">Rp [NOMINAL]</p></div>
+      <div><p class="k">Biaya jasa</p><p class="v">Rp [FEE]</p></div>
+      <div><p class="k">Batas konfirmasi</p><p class="v">[TANGGAL, JAM]</p></div>
+    </div>
+
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:16px">Riwayat status</h2>
+    <ol id="timeline" class="timeline"></ol>
+  </div>
+
+  <aside class="col-side">
+    <div class="card">
+      <h2 style="font-size:18px;font-weight:800;margin-bottom:8px">Untuk pembeli</h2>
+      <p class="muted" style="margin:0 0 20px;font-size:15px;line-height:1.55">Sudah cek barang atau akun? Konfirmasi hanya jika semuanya sesuai.</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <button id="btnKonfirmasi" class="btn btn-primary" type="button">Barang Sesuai, Cairkan Dana</button>
+        <button class="btn btn-danger" type="button" onclick="alert('Mockup: form sengketa akan terbuka di sini.')">Ajukan Sengketa</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2 style="font-size:18px;font-weight:800;margin-bottom:8px">Unggah bukti</h2>
+      <p class="muted" style="margin:0 0 16px;font-size:15px;line-height:1.55">Bukti transfer, resi, atau screenshot serah terima.</p>
+      <label for="bukti" class="upload">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3"/></svg>
+        <span id="namaFile">Pilih file</span>
+      </label>
+      <input id="bukti" class="sr-only" type="file" accept="image/*,.pdf">
+    </div>
+    <div class="warn"><strong>Hati-hati:</strong> admin kami hanya menghubungi dari WA [NOMOR RESMI]. Jangan transfer ke rekening lain.</div>
+  </aside>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>[Nama Rekber] · Kontak resmi: WA [NOMOR RESMI]</span>
+    <span>Syarat &amp; Ketentuan · Kebijakan Refund</span>
+  </div>
+</footer>
+
+<script>
+  // Data contoh — nanti diganti dengan data dari database (misal Supabase)
+  var langkah = [
+    { t: 'Transaksi dibuat', d: 'Kode dikirim ke pembeli dan penjual.' },
+    { t: 'Pembeli transfer dana', d: 'Bukti transfer diunggah.' },
+    { t: 'Dana diverifikasi admin', d: 'Dana sudah masuk ke rekening rekber.' },
+    { t: 'Barang dikirim penjual', d: 'Menunggu pembeli mengecek dan konfirmasi.' },
+    { t: 'Dana dicairkan ke penjual', d: 'Setelah pembeli konfirmasi atau batas waktu lewat.' }
+  ];
+  var aktif = 4;
+  var cek = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>';
+
+  function render() {
+    var html = '';
+    langkah.forEach(function (s, i) {
+      var n = i + 1;
+      var cls = n < aktif ? 'done' : (n === aktif ? 'active' : '');
+      html += '<li class="tl ' + cls + '"><div class="tl-rail"><span class="tl-dot">' + (n < aktif ? cek : '') + '</span>' +
+              (n < langkah.length ? '<span class="tl-line"></span>' : '') + '</div>' +
+              '<div class="tl-body"><p class="t">' + s.t + '</p><p class="d">' + s.d + '</p></div></li>';
+    });
+    document.getElementById('timeline').innerHTML = html;
+    var badge = document.getElementById('badge');
+    if (aktif > langkah.length) {
+      badge.textContent = 'Selesai, dana sudah dicairkan';
+      badge.style.background = '#DDF0E4'; badge.style.color = '#1B5E3B';
+      document.getElementById('btnKonfirmasi').disabled = true;
+    }
+  }
+
+  document.getElementById('btnKonfirmasi').addEventListener('click', function () {
+    if (confirm('Konfirmasi barang/akun sudah sesuai? Dana akan diteruskan ke penjual.')) {
+      aktif = langkah.length + 1;
+      render();
+    }
+  });
+  document.getElementById('formKode').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('kodeTampil').textContent = document.getElementById('kode').value.trim().toUpperCase() || 'RB-CONTOH01';
+  });
+  document.getElementById('bukti').addEventListener('change', function () {
+    document.getElementById('namaFile').textContent = this.files[0] ? this.files[0].name : 'Pilih file';
+  });
+  render();
+</script>
+</body>
+</html>
