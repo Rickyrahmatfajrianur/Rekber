@@ -3,132 +3,199 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[Nama Rekber] – Rekening Bersama &amp; Marketplace Akun Game</title>
-<meta name="description" content="Jasa rekening bersama (rekber) untuk transaksi online yang aman, plus marketplace akun game yang dilindungi rekber.">
+<title>RekberHub — Pendamping Transaksi Akun Game</title>
+<meta name="description" content="RekberHub: kesepakatan dikunci sebelum bayar, pembayaran lewat mitra resmi, dan setiap langkah tercatat. Tersedia juga Toko Resmi dengan garansi.">
+<meta name="theme-color" content="#123E7C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('rh-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap topbar">
-    <a class="brand" href="index.html">
-      <span class="brand-mark"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123E7C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
-      [Nama Rekber]
+<div class="band">
+  <header class="wrap topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+      RekberHub
     </a>
     <nav class="nav" aria-label="Menu utama">
-      <a href="marketplace.html" style="font-weight:700">Beli Akun Game</a>
-      <a href="#alur">Cara Kerja</a>
-      <a href="#biaya">Biaya</a>
-      <a href="#verifikasi">Cek Admin Resmi</a>
-      <a class="pill" href="cek-status.html">Cek Status</a>
+      <a href="/#cara-kerja">Cara Kerja</a>
+      <a href="/#biaya">Biaya</a>
+      <a href="/toko">Toko Resmi</a>
+      <a href="/#cek-admin">Cek Admin</a>
     </nav>
-  </div>
+    <div class="top-actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Ganti mode terang/gelap">
+        <svg class="i-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-gold btn-sm" href="[LINK_LOGIN]">Masuk</a>
+    </div>
+  </header>
 
   <div class="wrap hero">
-    <div class="hero-text">
-      <p class="eyebrow">Rekening Bersama</p>
-      <h1>Transaksi online aman, uang ditahan sampai barang diterima.</h1>
-      <p class="on-primary-muted" style="margin:24px 0 0;font-size:18px;line-height:1.6;max-width:520px">Kami jadi pihak penengah antara pembeli dan penjual. Dana baru diteruskan ke penjual setelah pembeli konfirmasi barang atau akun sesuai.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
-        <a class="btn btn-accent" href="#mulai">Mulai Transaksi</a>
-        <a class="btn btn-ghost" href="marketplace.html">Jelajahi Akun Game</a>
+    <div>
+      <p class="eyebrow">Pendamping transaksi akun game</p>
+      <h1>Jual beli akun game dengan alur yang jelas dan tercatat.</h1>
+      <p class="lead">Kesepakatan dikunci sebelum bayar, pembayaran lewat mitra resmi, dan setiap langkah punya jejak di dashboard — bukan sekadar tangkapan layar chat.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="[LINK_WHATSAPP_RESMI]">Mulai Rekber
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline" href="/toko">Lihat Toko Resmi</a>
       </div>
     </div>
+    <div class="hero-card" id="lacak">
+      <h2>Lacak transaksi</h2>
+      <p>Masukkan ID transaksi untuk melihat status. Detail pribadi tetap tersembunyi.</p>
+      <form data-lacak novalidate>
+        <div class="field">
+          <label for="lacak-id">ID transaksi</label>
+          <div class="input-row">
+            <input class="input mono" id="lacak-id" name="id" type="text" placeholder="RKB-XXXX-XX" autocomplete="off" spellcheck="false">
+            <button class="btn btn-primary" type="submit">Cek</button>
+          </div>
+        </div>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</div>
 
-    <form id="mulai" class="hero-form" onsubmit="event.preventDefault();alert('Mockup: di versi asli, kode transaksi dikirim ke kedua pihak.');">
-      <h2 style="font-size:22px;font-weight:800;margin-bottom:4px">Buat Transaksi Baru</h2>
-      <p class="muted" style="margin:0 0 24px;font-size:14px">Isi detail, kami kirim kode transaksi ke kedua pihak.</p>
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <div class="field">
-          <label for="peran">Saya sebagai</label>
-          <select id="peran" class="input"><option>Pembeli</option><option>Penjual</option></select>
+<div class="wrap" style="margin-top: 20px">
+  <div class="notice">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+    <p><b>Admin tidak pernah meminta password, PIN, atau OTP.</b> Pastikan kamu menghubungi kanal resmi yang tercantum di bagian <a href="#cek-admin">Cek Admin</a>.</p>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <h2>Dua layanan, dua aturan</h2>
+    <div class="services">
+      <article class="card">
+        <div class="svc-head">
+          <span class="svc-icon blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg></span>
+          <div><strong>Rekber</strong><span>Antara penjual dan pembeli lain</span></div>
         </div>
-        <div class="field">
-          <label for="barang">Barang / akun yang ditransaksikan</label>
-          <input id="barang" class="input" type="text" placeholder="Contoh: Akun game level 80">
+        <p>RekberHub sebagai pihak ketiga netral. Dana pembeli ditahan mitra pembayaran dan baru diteruskan ke penjual setelah akun diterima dan sesuai.</p>
+        <a class="link-more" href="#cara-kerja">Cara kerja rekber →</a>
+      </article>
+      <article class="card">
+        <div class="svc-head">
+          <span class="svc-icon gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9h16v11H4z"/><path d="M9 20v-6h6v6"/></svg></span>
+          <div><strong>Toko Resmi</strong><span>Dijual langsung oleh RekberHub</span></div>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:12px">
-          <div class="field" style="flex:1 1 140px">
-            <label for="harga">Harga (Rp)</label>
-            <input id="harga" class="input" type="text" inputmode="numeric" placeholder="0">
-          </div>
-          <div class="field" style="flex:1 1 140px">
-            <label for="wa">WA pihak lawan</label>
-            <input id="wa" class="input" type="tel" placeholder="08xx">
-          </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Buat Kode Transaksi</button>
+        <p>Akun stok milik RekberHub dengan asal perolehan tercatat. Harga final tanpa biaya rekber, dilindungi garansi Toko [7] hari.</p>
+        <a class="link-more gold" href="/toko">Jelajahi katalog →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cara-kerja">
+  <div class="wrap">
+    <h2>Cara kerja rekber</h2>
+    <p class="sec-sub">Empat langkah, setiap status bisa dipantau dengan ID transaksi.</p>
+    <div class="steps">
+      <div class="step"><span class="step-n">1</span><div><h3>Buat kesepakatan</h3><p>Penjual mengisi detail akun dan bukti. Petugas memeriksa kelayakan, lalu pembeli diundang lewat tautan khusus.</p></div></div>
+      <div class="step"><span class="step-n">2</span><div><h3>Setujui &amp; bayar</h3><p>Kedua pihak menyetujui rincian final. Pembeli membayar lewat mitra pembayaran resmi, bukan ke rekening pribadi.</p></div></div>
+      <div class="step"><span class="step-n">3</span><div><h3>Serah terima &amp; periksa</h3><p>Penjual mengalihkan akun dengan cara yang diizinkan penerbit game. Pembeli memeriksa dalam jendela inspeksi.</p></div></div>
+      <div class="step"><span class="step-n">4</span><div><h3>Dana diteruskan</h3><p>Setelah pembeli konfirmasi dan tidak ada sengketa, mitra mencairkan dana ke penjual. Semua tercatat.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="biaya">
+  <div class="wrap">
+    <h2>Biaya layanan rekber</h2>
+    <p class="sec-sub">Bisa ditanggung pembeli, penjual, atau dibagi dua — disepakati sebelum pembayaran.</p>
+    <div style="overflow-x: auto">
+      <table class="fee-table">
+        <thead><tr><th scope="col">Nilai transaksi</th><th scope="col">Biaya</th></tr></thead>
+        <tbody>
+          <tr><td>Di bawah Rp100.000</td><td>Rp5.000</td></tr>
+          <tr><td>Rp100.000 – Rp499.999</td><td>Rp10.000</td></tr>
+          <tr><td>Rp500.000 – Rp999.999</td><td>Rp15.000</td></tr>
+          <tr><td>Rp1.000.000 – Rp4.999.999</td><td>2%</td></tr>
+          <tr><td>Rp5.000.000 ke atas</td><td>1,5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fee-note">Biaya mitra pembayaran (jika ada) ditampilkan terpisah sebelum kamu membayar.</p>
+
+    <form class="card calc" data-calc>
+      <div class="field">
+        <label for="calc-harga">Hitung biaya — harga akun (Rp)</label>
+        <input class="input" id="calc-harga" type="text" inputmode="numeric" placeholder="Contoh: 750000">
+      </div>
+      <div class="field">
+        <label for="calc-oleh">Biaya ditanggung</label>
+        <select class="input" id="calc-oleh">
+          <option value="pembeli">Pembeli</option>
+          <option value="penjual">Penjual</option>
+          <option value="bagi">Dibagi dua</option>
+        </select>
+      </div>
+      <div class="calc-out" aria-live="polite" style="grid-column: 1 / -1">
+        <div><span>Biaya layanan</span><strong data-out="fee">—</strong></div>
+        <div><span>Pembeli membayar</span><strong data-out="bayar">—</strong></div>
+        <div><span>Penjual menerima</span><strong data-out="terima">—</strong></div>
       </div>
     </form>
   </div>
-</header>
+</section>
 
-<main>
-  <section id="alur" class="wrap section">
-    <h2 class="title">Cara kerjanya</h2>
-    <p class="muted" style="margin:12px 0 0;font-size:17px">Lima langkah, setiap status bisa dipantau dengan kode transaksi.</p>
-    <div class="steps">
-      <div class="step"><span class="step-num">1</span><h3 style="font-size:18px">Buat transaksi</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Salah satu pihak mengisi detail barang dan harga, lalu mendapat kode transaksi.</p></div>
-      <div class="step"><span class="step-num">2</span><h3 style="font-size:18px">Pembeli transfer</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Pembeli mentransfer dana ke rekening resmi rekber dan mengunggah bukti.</p></div>
-      <div class="step"><span class="step-num">3</span><h3 style="font-size:18px">Dana diverifikasi</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Admin memastikan dana masuk dan memberi tahu penjual untuk mengirim.</p></div>
-      <div class="step"><span class="step-num">4</span><h3 style="font-size:18px">Barang dikirim</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Penjual mengirim barang atau menyerahkan akun beserta buktinya.</p></div>
-      <div class="step"><span class="step-num">5</span><h3 style="font-size:18px">Dana dicairkan</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Setelah pembeli konfirmasi, dana diteruskan ke penjual dikurangi biaya.</p></div>
-    </div>
-  </section>
-
-  <section id="biaya" class="wrap section">
-    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start">
-      <div style="flex:1 1 320px;min-width:0">
-        <h2 class="title">Biaya jasa</h2>
-        <p class="muted" style="margin:12px 0 0;font-size:17px;line-height:1.6">Biaya dipotong saat dana dicairkan. Pihak yang menanggung biaya disepakati di awal transaksi.</p>
-      </div>
-      <div class="table-box" style="flex:2 1 520px;min-width:0">
-        <table>
-          <thead><tr><th>Nominal transaksi</th><th>Biaya</th></tr></thead>
-          <tbody>
-            <tr><td>Sampai Rp [BATAS 1]</td><td><strong>Rp [FEE TETAP]</strong></td></tr>
-            <tr><td>Rp [BATAS 1] – Rp [BATAS 2]</td><td><strong>[FEE %]</strong></td></tr>
-            <tr><td>Di atas Rp [BATAS 2]</td><td><strong>[FEE %], verifikasi KTP wajib</strong></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section id="verifikasi" class="wrap section">
-    <div class="band">
-      <div style="flex:1 1 360px;min-width:0">
-        <h2 style="font-size:30px;font-weight:800">Waspada admin palsu</h2>
-        <p class="on-primary-muted" style="margin:12px 0 0;font-size:16px;line-height:1.6">Sebelum transfer, cek apakah nomor WA atau rekening yang menghubungi kamu benar milik kami. Kami tidak pernah meminta transfer ke rekening selain yang terdaftar di sini.</p>
-      </div>
-      <form style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:8px" onsubmit="event.preventDefault();alert('Mockup: di versi asli, nomor dicocokkan dengan daftar admin resmi.');">
-        <label for="cekadmin" style="font-size:14px;font-weight:600">Nomor WA atau rekening</label>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <input id="cekadmin" class="input input-lg" style="flex:1 1 200px;width:auto" type="text" placeholder="Masukkan nomor">
-          <button class="btn btn-accent" type="submit">Cek</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <section class="wrap section">
-    <h2 class="title" style="margin-bottom:24px">Pertanyaan umum</h2>
-    <div style="display:flex;flex-direction:column;gap:12px">
-      <div class="faq"><h3 style="font-size:17px;margin-bottom:6px">Bagaimana kalau barang tidak sesuai?</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Ajukan sengketa sebelum konfirmasi. Dana tetap ditahan sampai ada keputusan sesuai aturan refund.</p></div>
-      <div class="faq"><h3 style="font-size:17px;margin-bottom:6px">Berapa lama batas konfirmasi pembeli?</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">[BATAS WAKTU]. Jika lewat tanpa sengketa, dana dicairkan otomatis ke penjual.</p></div>
-      <div class="faq"><h3 style="font-size:17px;margin-bottom:6px">Apakah transaksi akun game bisa?</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Bisa, untuk transaksi akun antara kamu dan orang lain. Kalau mau beli akun yang sudah pasti aman, cek <a href="marketplace.html">toko akun resmi kami</a>: semua stok milik kami sendiri dan bergaransi.</p></div>
-      <div class="faq"><h3 style="font-size:17px;margin-bottom:6px">Kenapa harus verifikasi identitas?</h3><p class="muted" style="margin:0;font-size:15px;line-height:1.55">Untuk nominal besar, verifikasi melindungi kedua pihak dan mencegah rekber dipakai untuk penipuan.</p></div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
+<section class="block" id="cek-admin">
   <div class="wrap">
-    <span>[Nama Rekber] · Kontak resmi: WA [NOMOR RESMI]</span>
-    <span>Syarat &amp; Ketentuan · Kebijakan Refund</span>
+    <div class="band-card">
+      <div>
+        <h2>Waspada admin palsu</h2>
+        <p>Kanal resmi RekberHub hanya yang tercantum di sini. Kami tidak pernah meminta transfer ke rekening pribadi atau mengirim tautan pembayaran lewat nomor lain.</p>
+      </div>
+      <div>
+        <p style="margin: 0 0 6px"><b style="color: var(--on-band)">WhatsApp resmi:</b> [NOMOR WA RESMI]</p>
+        <p style="margin: 0 0 6px"><b style="color: var(--on-band)">Domain resmi:</b> [DOMAIN RESMI]</p>
+        <p style="margin: 0"><b style="color: var(--on-band)">Jam layanan:</b> [JAM OPERASIONAL] WITA</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 style="margin-bottom: 20px">Pertanyaan umum</h2>
+    <div class="faq">
+      <details open><summary>Apakah semua akun game bisa direkber?</summary><p>Tidak. Kami hanya menerima game yang aturan penerbitnya memperbolehkan pengalihan akun, dan akun yang kepemilikannya bisa dibuktikan.</p></details>
+      <details><summary>Ke mana uang saya dibayarkan?</summary><p>Ke mitra pembayaran resmi sesuai instruksi di dashboard. Jangan pernah transfer ke rekening yang dikirim lewat chat.</p></details>
+      <details><summary>Apa bedanya Rekber dan Toko Resmi?</summary><p>Di Rekber kami menengahi dua pihak. Di Toko Resmi kami sendiri penjualnya, dengan harga final dan garansi Toko.</p></details>
+      <details><summary>Bagaimana jika akun ditarik pemilik lama?</summary><p>Ajukan sengketa sebelum dana cair (Rekber) atau klaim garansi selama masa garansi (Toko Resmi), lengkap dengan bukti.</p></details>
+      <details><summary>Apakah admin akan meminta password atau OTP?</summary><p>Tidak pernah. Siapa pun yang meminta password, PIN, atau OTP atas nama RekberHub bukan admin kami — laporkan lewat kanal resmi.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="/"><span class="brand-mark" style="width: 32px; height: 32px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>RekberHub</a>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.6">Pendamping transaksi akun game yang pengalihannya diizinkan penerbit.</p>
+    </div>
+    <nav class="foot-links" aria-label="Tautan footer">
+      <a href="/#cara-kerja">Cara kerja</a>
+      <a href="/#biaya">Biaya</a>
+      <a href="/toko">Toko Resmi</a>
+      <a href="/#cek-admin">Cek Admin</a>
+      <a href="[LINK_SYARAT_LAYANAN]">Syarat Layanan</a>
+      <a href="[LINK_KEBIJAKAN_PRIVASI]">Kebijakan Privasi</a>
+    </nav>
+    <div class="foot-meta" style="grid-column: 1 / -1">WhatsApp resmi: [NOMOR WA RESMI] · Jam layanan: [JAM OPERASIONAL] WITA<br>© <span data-year>2026</span> RekberHub</div>
   </div>
 </footer>
+
+<script src="/assets/app.js" defer></script>
 </body>
 </html>
